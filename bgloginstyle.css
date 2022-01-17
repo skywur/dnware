@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+
+:root {
+}
+body {
+	background-color: #101010;
+}
+#videobg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.textMain {
+	color: #502569;
+	font-family: 'Readex Pro', sans-serif;
+	transition: 0.3s;
+}
+.logo {
+	font-family: 'Readex Pro', sans-serif;
+	font-size:3.5vw;
+	background: linear-gradient(to right, #66faff 20%, #ff66f7 40%, white 60%, #ff66f7 80%, #66faff 100%);
+	background-size: 20% auto;
+	position: relative;
+	padding: 1vw;
+	margin: 0%;
+	transition: 0.3s;
+
+	filter: drop-shadow(0.2vw 0.2vw rgba(0,0,0,0.5));
+
+	text-align: center;
+
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: shine 20s linear infinite, slidein 1s;
+}
+.logo:hover {
+	letter-spacing: .5vw;
+	cursor: default;
+}
+.loginBox {
+	position: absolute;
+	left: 40%;
+	top:35%;
+	width: 20vw;
+	height: 13vw;
+	background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+	border: 1vw rgba(0,0,0,0.8);
+	border-radius: 1vw;
+	animation: growin 1s;
+}
+.loginText {
+	color:white;
+	text-align: center;
+	font-size: 2vw;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+.loginButton {
+	display:block;
+	position:relative;
+	margin: 0 auto;
+	color: magenta;
+	background-color: rgba(0,0,0,0.2);
+	border: 0.3vw solid rgba(0,0,0,0);
+}
+.loginSubmitButton {
+	display:block;
+	position:relative;
+	margin: 0 auto;
+	top:5%;
+	color: white;
+	background-color: rgba(254, 151, 254, 1);
+	border: none;
+	height: 3vw;
+	width:5vw;
+	transition: 0.3s;
+	font-weight: bold;
+	border-radius:10px;
+}
+.loginSubmitButton:hover {
+	box-shadow: 0 0 5px rgba(254, 151, 254, 1),
+              0 0 20px rgba(254, 151, 254, 1),
+              0 0 30px rgba(254, 151, 254, 1),
+              0 0 50px rgba(254, 151, 254, 1);
+}
+.loginSubmitButton:active {
+	width: 6vw;
+	background-color: magenta;
+	box-shadow: 0 0 5px magenta,
+              0 0 20px magenta,
+              0 0 30px magenta,
+              0 0 50px magenta;
+}
+
+.devtext {
+	position: absolute;
+	bottom: 3%;
+	left:3%;
+	font-size: 1vw;
+	color:gray;
+	font-family: 'Readex Pro', sans-serif;
+
+}
+
+
+input::-webkit-input-placeholder {
+    transition:0.3s;
+}
+input:focus::-webkit-input-placeholder {
+    color: rgba(255,0,255,0.5);
+}
+input:focus {
+	outline:none;
+
+}
+
+@keyframes shine {
+	to {background-position: 200% center;}
+}
+@keyframes slidein {
+	0% {transform: translateY(-100%); opacity:0%;}
+	100% {transform: translateY(0%); opacity:100%;}
+}
+@keyframes fadein {
+	0% {opacity: 0%;}
+	100% {opacity: 100%;}
+}
+@keyframes growin {
+	0% {transform: scale(0%, 0%);}
+	100% {transform: scale(100%, 100%);}
+}
+
+
+
+/* noise bg */
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite, fadein 1.5s;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
