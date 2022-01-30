@@ -97,6 +97,22 @@ body {
   background-color: rgba(254, 151, 254, .5);
 }
 
+.register {
+	display:block;
+	position:relative;
+	margin: 0 auto;
+	top: 15%;
+	text-align: center;
+	z-index: 3;
+	color: rgb(136, 136, 136);
+	font-family: 'Readex Pro', sans-serif;
+	transition: 0.3s;
+	text-decoration: none;
+}
+.register:hover{
+	color:rgb(186, 186, 186);
+}
+
 .devtext {
 	position: absolute;
 	bottom: 3%;
